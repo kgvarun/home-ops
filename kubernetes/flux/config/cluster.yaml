@@ -8,7 +8,7 @@ spec:
   interval: 10m
   ref:
     branch: main
-  url: ssh://git@github.com/kgvarun/home-ops
+  url: ssh://git@github.com:kgvarun/home-ops
   secretRef:
     name: github-deploy-key
 #  ignore: |
