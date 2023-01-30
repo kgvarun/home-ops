@@ -11,7 +11,7 @@ spec:
   url: ssh://git@github.com/kgvarun/home-ops
   secretRef:
     name: github-deploy-key
-      #  ignore: |
+#  ignore: |
       #    # exclude all
       #    /*
       #    # include kubernetes directory
@@ -29,7 +29,7 @@ spec:
   wait: false
   sourceRef:
     kind: GitRepository
-    name: home-ops
+    name: home-kubernetes
   decryption:
     provider: sops
     secretRef:
