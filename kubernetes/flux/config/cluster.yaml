@@ -5,15 +5,17 @@ metadata:
   name: home-kubernetes
   namespace: flux-system
 spec:
-  interval: 30m
+  interval: 10m
   ref:
     branch: main
   url: ssh://git@github.com/kgvarun/home-ops
-  ignore: |
-    # exclude all
-    /*
-    # include kubernetes directory
-    !/kubernetes
+  secretRef:
+    name: github-deploy-key
+      #  ignore: |
+      #    # exclude all
+      #    /*
+      #    # include kubernetes directory
+      #    !/kubernetes
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
