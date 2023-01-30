@@ -10,5 +10,9 @@
         "EditorConfig.editorconfig",
         "HashiCorp.terraform",
         "PKief.material-icon-theme",
+    ],
+    "unwantedRecommendations": [
+      "britesnow.vscode-toggle-quotes",
+      "will-stone.in-any-case"
     ]
 }
