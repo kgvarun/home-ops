@@ -6,4 +6,4 @@ resources:
     - ./helmrelease.yaml
 commonLabels:
     app.kubernetes.io/name: excalidraw
-    app.kubernetes.io/instance: excalidrawi
+    app.kubernetes.io/instance: excalidraw
