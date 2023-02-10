@@ -17,4 +17,6 @@
     "editor.guides.highlightActiveBracketPair": true,
     "editor.hover.delay": 1500,
     "files.trimTrailingWhitespace": true,
+    "sops.defaults.ageKeyFile": "/home/abc/.config/sops/age/keys.txt",
+    "sops.creationEnabled": true,
 }
