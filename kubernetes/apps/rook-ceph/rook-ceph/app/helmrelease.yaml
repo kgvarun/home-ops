@@ -7,7 +7,6 @@ metadata:
   namespace: rook-ceph
 spec:
   interval: 15m
-  url: https://charts.rook.io/release
   chart:
     spec:
       chart: rook-ceph
