@@ -15,6 +15,7 @@ spec:
         kind: HelmRepository
         name: rook-ceph
         namespace: flux-system
+        url: https://charts.rook.io/release
   maxHistory: 2
   install:
     createNamespace: true
