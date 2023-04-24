@@ -38,5 +38,5 @@ spec:
       name: rook-ceph-cluster
       namespace: rook-ceph
   interval: 15m
-  retryInterval: 1m
+  retryInterval: 30s
     #  timeout: 5m
