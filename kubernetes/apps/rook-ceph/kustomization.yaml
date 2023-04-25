@@ -1,5 +1,40 @@
 ---
-apiVersion: kustomize.config.k8s.io/v1beta1
+apiVersion: kustomize.config.k8s.io/v1beta2
 kind: Kustomization
+metadata:
+  name: rook-ceph-namespace
+  namespace: flux-system
+  labels:
+    component.cluster/part-of: definitions
 resources:
-  - namespace.yaml
+  - ./namespace.yaml
+spec:
+  prune: true
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: rook-ceph-operator
+  namespace: flux-system
+  labels:
+    component.cluster/part-of: definitions
+spec:
+  dependsOn:
+    - name: rook-ceph-namespace
+    - name: monitoring-kube-prometheus-stack
+  path: "./operator"
+  prune: true
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: rook-ceph-cluster
+  namespace: flux-system
+  labels:
+    component.cluster/part-of: definitions
+spec:
+  dependsOn:
+    - name: rook-ceph-namespace
+    - name: rook-ceph-operator
+  path: "./cluster"
+  prune: true
