@@ -8,8 +8,6 @@ metadata:
     component.cluster/part-of: definitions
 resources:
   - ./namespace.yaml
-spec:
-  prune: true
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
