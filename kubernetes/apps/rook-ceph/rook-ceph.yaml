@@ -23,6 +23,7 @@ spec:
     - name: monitoring-kube-prometheus-stack
   path: "./operator"
   prune: true
+  interval: 10m
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
@@ -37,3 +38,4 @@ spec:
     - name: rook-ceph-operator
   path: "./cluster"
   prune: true
+  interval: 10m
