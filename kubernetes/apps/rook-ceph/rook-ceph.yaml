@@ -7,9 +7,6 @@ metadata:
   labels:
     component.cluster/part-of: definitions
 spec:
-  dependsOn:
-    - name: rook-ceph-namespace
-    - name: monitoring-kube-prometheus-stack
   path: "./namespace"
   prune: true
 ---
